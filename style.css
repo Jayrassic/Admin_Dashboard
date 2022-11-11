@@ -2,3 +2,44 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    display: grid;
+    grid-template-areas: 
+    "side head"
+    "side main";
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 3fr 15fr;
+}
+
+.sidepod {
+    grid-area: side;
+    display: grid;
+    grid-template-rows: 1fr 3fr 3fr;
+    gap: 5px;
+    background-color: blue;
+}
+
+.sidepod a {
+    color:white
+}
+
+.header {
+    grid-area: head;
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: green;
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: gray;
+}
+
+.projects {
+    grid-row: 1/3;
+}
